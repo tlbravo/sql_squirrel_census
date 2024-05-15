@@ -3,8 +3,8 @@ DROP TABLE squirrel_data;
 
 -- Create table and view column datatypes
 CREATE TABLE squirrel_data (
-	X DEC,
-	Y DEC,
+	X DECIMAL,
+	Y DECIMAL,
 	Unique_Squirrel_ID VARCHAR, 
 	Hectare VARCHAR, 
 	Shift VARCHAR,
@@ -16,7 +16,7 @@ CREATE TABLE squirrel_data (
 	Combination_of_Primary_and_Highlight_Color VARCHAR,
 	Color_notes VARCHAR, 
 	Location_found VARCHAR,
-	Above_Ground_Sighter_Measurement INT, 
+	Above_Ground_Sighter_Measurement VARCHAR, 
 	Specific_Location VARCHAR, 
 	Running BOOLEAN,
 	Chasing BOOLEAN,
@@ -32,7 +32,7 @@ CREATE TABLE squirrel_data (
 	Approaches BOOLEAN, 
 	Indifferent BOOLEAN, 
 	Runs_from BOOLEAN, 
-	Other_Interactions BOOLEAN, 
+	Other_Interactions VARCHAR, 
 	Lat_Long VARCHAR
 );
 
