@@ -1,4 +1,4 @@
-# SQL Squirrel Cencus
+# SQL Squirrel Census
 
 I used this [2018 NYC dataset](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data) comprised of over 3000 squirrel sightings and data such as age, fur color, activities, interaction with humans, etc.
 

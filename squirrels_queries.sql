@@ -36,5 +36,22 @@ CREATE TABLE squirrel_data (
 	Lat_Long VARCHAR
 );
 
+COPY squirrel_data
+FROM 'C:\Users\Public\2018_Central_Park_Squirrel_Census_-_Squirrel_Data_20240503.csv'
+WITH (FORMAT CSV, HEADER);
+
+
 SELECT * 
 FROM squirrel_data;
+
+--What was the date for the highest number of sightings?
+SELECT Date_found,
+COUNT(Unique_Squirrel_ID) AS squirrel_count
+FROM squirrel_data
+GROUP BY Date_found 
+ORDER BY squirrel_count DESC;
+--434 squirrels were recorded on 10/13/28
+
+SELECT age, Running
+FROM squirrel_data
+GROUP BY age, Running;
