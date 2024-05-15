@@ -52,6 +52,12 @@ GROUP BY Date_found
 ORDER BY squirrel_count DESC;
 --434 squirrels were recorded on 10/13/28
 
-SELECT age, Running
+SELECT age,
+COUNT(Location_found) AS location_count
 FROM squirrel_data
-GROUP BY age, Running;
+GROUP BY age;
+--There were mostly adults found vs juveniles. There are about 110 rows where the volunteer couldn't determine the age.
+
+--Removing rows where the age information is blank or '?'.
+DELETE FROM squirrel_data 
+WHERE age IS NULL OR age ='?'; 
