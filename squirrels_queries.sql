@@ -61,3 +61,14 @@ GROUP BY age;
 --Removing rows where the age information is blank or '?'.
 DELETE FROM squirrel_data 
 WHERE age IS NULL OR age ='?'; 
+
+--Most squirrel sightings occured during the PM hours for both adults and juveniles.
+SELECT shift, age, COUNT (shift) AS am_or_pm
+FROM squirrel_data
+GROUP BY shift, age;
+
+
+--Most squirrels were found on the ground plane.
+SELECT location_found, COUNT (age) AS age_count
+FROM squirrel_data
+GROUP BY location_found;
