@@ -72,3 +72,18 @@ GROUP BY shift, age;
 SELECT location_found, COUNT (age) AS age_count
 FROM squirrel_data
 GROUP BY location_found;
+
+--Which squirrels are more willing to approach humans, and in which areas?
+SELECT unique_squirrel_id, location_found, approaches
+FROM squirrel_data
+WHERE approaches = 'true'
+ORDER BY location_found;
+--most squirrels who approached humans were found on the ground plane. makes sense.
+
+--Do squirrels who approach humans eat more frequently?
+SELECT unique_squirrel_id, location_found, approaches, eating
+FROM squirrel_data
+WHERE approaches = 'true' AND eating = 'false'
+ORDER BY location_found;
+--more squirrels who approached humans were not found eating
+
