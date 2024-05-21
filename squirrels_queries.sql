@@ -44,14 +44,6 @@ WITH (FORMAT CSV, HEADER);
 SELECT * 
 FROM squirrel_data;
 
---What was the date for the highest number of sightings?
-SELECT Date_found,
-COUNT(Unique_Squirrel_ID) AS squirrel_count
-FROM squirrel_data
-GROUP BY Date_found 
-ORDER BY squirrel_count DESC;
---434 squirrels were recorded on 10/13/28
-
 SELECT age,
 COUNT(Location_found) AS location_count
 FROM squirrel_data
@@ -62,11 +54,20 @@ GROUP BY age;
 DELETE FROM squirrel_data 
 WHERE age IS NULL OR age ='?'; 
 
+
+--What was the date for the highest number of sightings?
+SELECT Date_found,
+COUNT(Unique_Squirrel_ID) AS squirrel_count
+FROM squirrel_data
+GROUP BY Date_found 
+ORDER BY squirrel_count DESC
+LIMIT 1;
+--400 squirrels were recorded on 10/13/18
+
 --Most squirrel sightings occured during the PM hours for both adults and juveniles.
 SELECT shift, age, COUNT (shift) AS am_or_pm
 FROM squirrel_data
 GROUP BY shift, age;
-
 
 --Most squirrels were found on the ground plane.
 SELECT location_found, COUNT (age) AS age_count
@@ -86,4 +87,10 @@ FROM squirrel_data
 WHERE approaches = 'true' AND eating = 'false'
 ORDER BY location_found;
 --more squirrels who approached humans were not found eating
+
+--Primary fur color counts
+SELECT primary_fur_color, count( primary_fur_color) AS color
+FROM squirrel_data
+GROUP BY primary_fur_color
+ORDER BY primary_fur_color;
 

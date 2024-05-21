@@ -4,7 +4,9 @@ I used this [2018 NYC dataset](https://data.cityofnewyork.us/Environment/2018-Ce
 
 The information on this dataset was collected by volunteers. More information can be found [here](https://www.thesquirrelcensus.com/).
 
-I'm in the process of using PostgreSQL and pgAdmin to explore the different patterns NYC squirrels might display. I chose to explore this dataset because it's a fun dataset to explore. Further analysis could be used to track the squirrel population for conservation activities.
+I am using PostgreSQL and pgAdmin to explore the different patterns NYC squirrels might display. I chose to explore this dataset because it's a fun dataset to explore because the data collection was done through community volunteering. I wondered if that would have an impact on the data quality. 
+
+This is an ongoing project which I'll be updating through my time taking a SQL course. 
 
 ## Process
 
@@ -24,8 +26,20 @@ First, I wanted to explore the number of adults vs juvenile squirrels. There wer
 
 ## Key Findings
 
-I begain exploring the dataset through queries. First, I wanted to find the data where most squirrel sightings occured. 400 squirrels were recorded on 10/13/18. This could be due to many reasons like the weather, matting patterns, etc.
+I begain exploring the dataset through queries. Here are my findings:
 
-Most squirrel sightings occured during the PM hours for both adults and juveniles on the ground plane.
+* The most number of squirrels seen in one day was 400 squirrels recorded on 10/13/18. This could be due to many reasons like the weather, matting patterns, etc.
 
-More squirrels who approached humans were not found eating.
+* Squirrels with gray primary fur colors were the majority observed followed by cinnamon, then black. 
+
+* Most squirrel sightings occured during the PM hours for both adults and juveniles on the ground plane. 
+    * They may venture out at night in search of food due to less competition than the daytime. 
+    * Volunteers are more likely to spot them closer to the ground.
+
+* More squirrels who approached humans were not found eating. 
+
+## Conclusions
+
+SQL is an excellent tool that could be used to explore and gain more insight on large datasets through queries. Overall, the data was clean and easy to work with because the volunteers and researchers did an excellent job entering data and upkeeping data integrity. 
+
+Further analysis could be used to track the squirrel population for conservation activities. Currently, most squirrel species in North America have the conservation status of "least concern (population stable)" so luckily squirrel conservation analysis may not be necessary for a few more decades.
