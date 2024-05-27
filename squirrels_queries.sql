@@ -94,3 +94,27 @@ FROM squirrel_data
 GROUP BY primary_fur_color
 ORDER BY primary_fur_color;
 
+--Exploring what sounds did the squirrels make most often when observed 
+SELECT COUNT(*) AS Kuks_count
+FROM squirrel_data
+WHERE Kuks = 'true';
+--90 kuks
+
+SELECT COUNT(*) AS Quaas_count
+FROM squirrel_data
+WHERE Quaas = 'true';
+--45 quaas
+
+SELECT COUNT(*) AS Moans_count
+FROM squirrel_data
+WHERE Moans = 'true';
+--2 moans
+
+--Comparing squirrel sounds per unique squirrel id
+SELECT unique_squirrel_id, 
+    SUM(CASE WHEN Kuks = 'true' THEN 1 ELSE 0 END) AS Kuks_count, 
+    SUM(CASE WHEN Quaas = 'true' THEN 1 ELSE 0 END) AS Quaas_count, 
+    SUM(CASE WHEN Moans = 'true' THEN 1 ELSE 0 END) AS Moans_count
+FROM squirrel_data
+GROUP BY unique_squirrel_id;
+

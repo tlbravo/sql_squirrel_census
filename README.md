@@ -36,7 +36,9 @@ I begain exploring the dataset through queries. Here are my findings:
     * They may venture out at night in search of food due to less competition than the daytime. 
     * Volunteers are more likely to spot them closer to the ground.
 
-* More squirrels who approached humans were not found eating. 
+* More squirrels who approached humans were not found eating.
+
+* Out of the three sounds squirrels made (kuks, quaas, and moans) most squirrels were observed making kuks. Followed by quaas and lastly moans. 
 
 ## Conclusions
 
